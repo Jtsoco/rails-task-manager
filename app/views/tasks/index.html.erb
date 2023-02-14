@@ -1,0 +1,10 @@
+<div class="container m-0">
+<h1 style="font-size:50px">My Tasks!</h1>
+<ul class = "ml-0">
+  <% @tasks.each do |task| %>
+    <li>
+      <p><%= task.completed? ? '[X]' : '[ ]' %><%= link_to task.title, task_path(task) %></p>
+    </li>
+  <% end %>
+</ul>
+</div>
