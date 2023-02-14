@@ -3,5 +3,8 @@
   <%= t.text_field :title, class:'form-control mb-3' %>
   <%= t.label :details %>
   <%= t.text_field :details, class:'form-control mb-3' %>
+  <%= t.check_box(:completed) %>
+  <%= t.label(:completed, "Completed")%>
+
   <%= t.submit class: "btn btn-primary" %>
   <% end %>

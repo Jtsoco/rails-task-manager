@@ -4,7 +4,6 @@
 <p style="font-size:20px">Completion Status: <%= @task.completed? ? '[X]' : '[ ]' %></p>
 <p><%= link_to 'Back to list', tasks_path %></p>
 <p><%= link_to 'Update Task Info', edit_task_path(@task) %></p>
-<p><%= link_to 'Completed', complete_path(@task) %></p>
 <p><%= link_to 'Delete', task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{@task.title}?"} %></p>
 
 

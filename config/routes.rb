@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get '/tasks/:id/edit', to: 'tasks#edit', as: :edit_task
   patch '/tasks/:id', to: 'tasks#update'
   delete '/tasks/:id', to: 'tasks#destroy'
-  get '/tasks/:id/complete', to: 'tasks#complete', as: :complete
-
   # Defines the root path route ("/")
   # root "articles#index"
 end

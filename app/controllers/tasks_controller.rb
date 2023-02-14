@@ -39,17 +39,10 @@ class TasksController < ApplicationController
     redirect_to tasks_path, status: :see_other
   end
 
-  def complete
-    @task = Task.find(params[:id])
-    @task.completed = true
-    @task.save
-    redirect_to task_path(@task), status: :see_other
-  end
-
   private
 
   def task_params
-    params.require(:task).permit(:title, :details)
+    params.require(:task).permit(:title, :details, :completed)
   end
 
 
